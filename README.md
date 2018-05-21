@@ -10,7 +10,7 @@ A simple method of protecting card data
 - first marshall the payment card object into a JSON a structure : 
 
 
-*Relevant Code:*
+**Relevant Code:**
 ```java
 JSONObject card = new JSONObject();
             try {
