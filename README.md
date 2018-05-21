@@ -11,7 +11,7 @@ A simple method of protecting card data
 
 
 Java Code:
-```
+```java
 JSONObject card = new JSONObject();
             try {
                 card.put("CCN", mCardForm.getCardNumber());
@@ -32,7 +32,7 @@ JSONObject card = new JSONObject();
 - Persist the sensitive data in the VGS Vault & get a result at the UI Callback.  
 
 
-```
+```java
 
             // Mobile Backend Service with VGS Proxy re-write rule: Mobile_BackEndClient(url, mbe_endpoint)
             Mobile_BackEndClient api = new Mobile_BackEndClient(url, mbe_endpoint); //URL reflects VGS proxy
