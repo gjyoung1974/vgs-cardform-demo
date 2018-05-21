@@ -10,19 +10,19 @@ public final class CardStorageContract {
     }
 
     public static class CardEntry implements BaseColumns {
-        public static final String TABLE_NAME = "CARDS";
-        public static final String card_COLUMN_NAME_CARDID = "cardid";
+        public static final String TABLE_NAME = "cards";
+        public static final String CARDS_CARDIDENTIFIER = "CARDS_CARDIDENTIFIER";
 
         // 'tokenized' card details
-        public static final String CARDS_COLUMN_NAME_CARDTYPE = "cardtype";
-        public static final String CARDS_COLUMN_NAME_CARD_CCN = "ccn";
-        public static final String CARDS_COLUMN_NAME_CARD_CVV = "cvv";
-        public static final String CARDS_COLUMN_NAME_CARD_MONTH = "month";
-        public static final String CARDS_COLUMN_NAME_CARD_YEAR = "year";
+        public static final String CARDS_CARDTYPE = "CARDS_CARDTYPE";
+        public static final String CARDS_CCN = "CARDS_CCN";
+        public static final String CARDS_CVV = "CARDS_CVV";
+        public static final String CARDS_MONTH = "CARDS_MONTH";
+        public static final String CARDS_YEAR = "CARDS_YEAR";
 
         // 'tokenized' personal details
-        public static final String CARDS_COLUMN_NAME_CARD_POST_CODE = "post_code";
-        public static final String CARDS_COLUMN_NAME_CARD_COUNTRYCODE = "countrycode";
-        public static final String CARDS_COLUMN_NAME_CARD_MOBILE = "mobile";
+        public static final String CARDS_POST_CODE = "CARDS_POST_CODE";
+        public static final String CARDS_COUNTRYCODE = "CARDS_COUNTRYCODE";
+        public static final String CARDS_MOBILE = "CARDS_MOBILE";
     }
 }

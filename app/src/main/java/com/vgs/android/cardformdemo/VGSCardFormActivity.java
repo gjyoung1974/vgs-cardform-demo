@@ -21,14 +21,15 @@ import org.json.JSONObject;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import static com.vgs.android.cardformdemo.CardStorageContract.CardEntry.CARDS_COLUMN_NAME_CARDTYPE;
-import static com.vgs.android.cardformdemo.CardStorageContract.CardEntry.CARDS_COLUMN_NAME_CARD_CCN;
-import static com.vgs.android.cardformdemo.CardStorageContract.CardEntry.CARDS_COLUMN_NAME_CARD_COUNTRYCODE;
-import static com.vgs.android.cardformdemo.CardStorageContract.CardEntry.CARDS_COLUMN_NAME_CARD_CVV;
-import static com.vgs.android.cardformdemo.CardStorageContract.CardEntry.CARDS_COLUMN_NAME_CARD_MOBILE;
-import static com.vgs.android.cardformdemo.CardStorageContract.CardEntry.CARDS_COLUMN_NAME_CARD_MONTH;
-import static com.vgs.android.cardformdemo.CardStorageContract.CardEntry.CARDS_COLUMN_NAME_CARD_POST_CODE;
-import static com.vgs.android.cardformdemo.CardStorageContract.CardEntry.CARDS_COLUMN_NAME_CARD_YEAR;
+import static com.vgs.android.cardformdemo.CardStorageContract.CardEntry.CARDS_CARDIDENTIFIER;
+import static com.vgs.android.cardformdemo.CardStorageContract.CardEntry.CARDS_CARDTYPE;
+import static com.vgs.android.cardformdemo.CardStorageContract.CardEntry.CARDS_CCN;
+import static com.vgs.android.cardformdemo.CardStorageContract.CardEntry.CARDS_COUNTRYCODE;
+import static com.vgs.android.cardformdemo.CardStorageContract.CardEntry.CARDS_CVV;
+import static com.vgs.android.cardformdemo.CardStorageContract.CardEntry.CARDS_MOBILE;
+import static com.vgs.android.cardformdemo.CardStorageContract.CardEntry.CARDS_MONTH;
+import static com.vgs.android.cardformdemo.CardStorageContract.CardEntry.CARDS_POST_CODE;
+import static com.vgs.android.cardformdemo.CardStorageContract.CardEntry.CARDS_YEAR;
 
 
 public class VGSCardFormActivity extends AppCompatActivity implements OnCardFormSubmitListener,
@@ -127,50 +128,51 @@ public class VGSCardFormActivity extends AppCompatActivity implements OnCardForm
 
                     // Gets the data repository in write mode
                     SQLiteDatabase db = mDbHelper.getWritableDatabase();
+                    Log.i(this.getClass().getName(), "db path" + db.getPath());
 
                     // Create a new map of values, where column names are the keys
                     ContentValues values = new ContentValues();
-                    //values.put(CARDS_COLUMN_NAME_CARDID, 1);
+                    values.put(CARDS_CARDIDENTIFIER, 1);
+                    values.put(CARDS_CARDTYPE, mCardForm.getCardEditText().getCardType().toString());
 
-                    values.put(CARDS_COLUMN_NAME_CARDTYPE, mCardForm.getCardEditText().getCardType().toString());
                     try {
-                        values.put(CARDS_COLUMN_NAME_CARD_CCN, jObject.getString("CCN"));
+                        values.put(CARDS_CCN, jObject.getString("CCN"));
                     } catch (JSONException e) {
                         Log.e(this.getClass().getName(),e.getLocalizedMessage());;
                     }
 
                     try {
-                        values.put(CARDS_COLUMN_NAME_CARD_CVV, jObject.getString("CVV"));
+                        values.put(CARDS_CVV, jObject.getString("CVV"));
                     } catch (JSONException e) {
                         Log.e(this.getClass().getName(),e.getLocalizedMessage());;
                     }
 
                     try {
-                        values.put(CARDS_COLUMN_NAME_CARD_MONTH, jObject.getString("MONTH"));
+                        values.put(CARDS_MONTH, jObject.getString("MONTH"));
                     } catch (JSONException e) {
                         Log.e(this.getClass().getName(),e.getLocalizedMessage());;
                     }
 
                     try {
-                        values.put(CARDS_COLUMN_NAME_CARD_YEAR, jObject.getString("YEAR"));
+                        values.put(CARDS_YEAR, jObject.getString("YEAR"));
                     } catch (JSONException e) {
                         Log.e(this.getClass().getName(),e.getLocalizedMessage());;
                     }
 
                     try {
-                        values.put(CARDS_COLUMN_NAME_CARD_POST_CODE, jObject.getString("POST_CODE"));
+                        values.put(CARDS_POST_CODE, jObject.getString("POST_CODE"));
                     } catch (JSONException e) {
                         Log.e(this.getClass().getName(),e.getLocalizedMessage());;
                     }
 
                     try {
-                        values.put(CARDS_COLUMN_NAME_CARD_COUNTRYCODE, jObject.getString("COUNTRYCODE"));
+                        values.put(CARDS_COUNTRYCODE, jObject.getString("COUNTRYCODE"));
                     } catch (JSONException e) {
                         Log.e(this.getClass().getName(),e.getLocalizedMessage());;
                     }
 
                     try {
-                        values.put(CARDS_COLUMN_NAME_CARD_MOBILE, jObject.getString("MOBILE"));
+                        values.put(CARDS_MOBILE, jObject.getString("MOBILE"));
                     } catch (JSONException e) {
                         Log.e(this.getClass().getName(),e.getLocalizedMessage());;
                     }
