@@ -57,13 +57,13 @@ JSONObject card = new JSONObject();
 - Securely authorize payments without directly handling raw/plaintext payment card data in your mobile backend. 
 - Safely & securely enrich other business processes, secure data analytics, etc.
 
-Example form:    
+**Example form:**    
 ![Add Card Dialog](./docs/add_card_form.png)    
 
-Example VGS Dashboard 'Route' configuration for this demo:    
+**Example VGS Dashboard 'Route' configuration for this demo:**    
 ![VGS Rules Config](./docs/routes.png)     
 
-Persist a new card results:     
+**Persist a new card results:**     
 ![Persist a card results](./docs/add_card_result.png)        
 
 ## How to run the demo:
