@@ -62,7 +62,7 @@ Example VGS Dashboard Rules config for this demo:
 ![VGS Rules Config](./docs/rules.png)     
 
 Persist a card results:     
-![Persist a card results](./docs/vgs-android.png)        
+![Persist a card results](./docs/add_card_result.png)        
 
 ## How to run the demo:
 **Installation requirements:**    
