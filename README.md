@@ -7,10 +7,10 @@ This is an **"add payment card form"** for Android
 - Code changes are minimal. Just set VGS as a "proxy" to your mobile backend.  
 
 A simple method of protecting card data 
+
+**Relevant Code:**   
 - first marshall the payment card object into a JSON a structure : 
 
-
-**Relevant Code:**
 ```java
 JSONObject card = new JSONObject();
             try {
@@ -60,10 +60,10 @@ JSONObject card = new JSONObject();
 Example form:    
 ![Add Card Dialog](./docs/add_card_form.png)    
 
-Example VGS Dashboard Rules config for this demo:    
+Example VGS Dashboard 'Route' configuration for this demo:    
 ![VGS Rules Config](./docs/routes.png)     
 
-Persist a card results:     
+Persist a new card results:     
 ![Persist a card results](./docs/add_card_result.png)        
 
 ## How to run the demo:
