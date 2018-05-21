@@ -10,7 +10,7 @@ A simple method of protecting card data
 - first marshall the payment card object into a JSON a structure : 
 
 
-Java Code:
+*Relevant Code:*
 ```java
 JSONObject card = new JSONObject();
             try {
@@ -72,7 +72,7 @@ Persist a card results:
 * Min SDK Version:* `API 24: Android 7.0 (Nougat)`    
 
 **Gradle Dependancies:**
-```
+```gradle
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     testImplementation 'junit:junit:4.12'
