@@ -27,15 +27,15 @@ JSONObject card = new JSONObject();
             }
 ```
 
-- Instantiate the Mobile_BackEndClient(URL vgs_proxy_url, String your_mbe_api_endpoint) with the VGS Proxy URL and desired endpoint.    
+- Instantiate the MobileBackEndClient(URL vgs_proxy_url, String your_mbe_api_endpoint) with the VGS Proxy URL and desired endpoint.    
 
 - Persist the sensitive data in the VGS Vault & get a result at the UI Callback.  
 
 
 ```java
 
-            // Mobile Backend Service with VGS Proxy re-write rule: Mobile_BackEndClient(url, mbe_endpoint)
-            Mobile_BackEndClient api = new Mobile_BackEndClient(url, mbe_endpoint); //URL reflects VGS proxy
+            // Mobile Backend Service with VGS Proxy re-write rule: MobileBackEndClient(url, mbe_endpoint)
+            MobileBackEndClient api = new MobileBackEndClient(url, mbe_endpoint); //URL reflects VGS proxy
             api.persistSensitive(card.toString(), new MobileBE_UICallback() {
                 @Override
                 public void onSuccess(String token) {
@@ -45,7 +45,7 @@ JSONObject card = new JSONObject();
 
                 @Override
                 public void onFailure(MobileBE_Error error) {
-                    Toast.makeText(mCardForm.getContext(), error.toString(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mCardForm.getContext(), error.toString(), Toast.LENGTH_LONG).show();
 
                 }
             });
